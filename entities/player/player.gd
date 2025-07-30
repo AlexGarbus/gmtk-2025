@@ -3,8 +3,22 @@ extends CharacterBody3D
 
 @export var move_speed := 5.0
 
+@onready var _world_detection := $WorldDetection
+var _world_margin: float
+
+
+func _ready() -> void:
+	_world_margin = _world_detection.position.length()
+
 
 func _physics_process(_delta: float) -> void:
+	_apply_input()
+	_update_world_detection()
+	if _world_detection.is_colliding():
+		move_and_slide()
+
+
+func _apply_input() -> void:
 	var input_dir := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
@@ -13,4 +27,8 @@ func _physics_process(_delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, move_speed)
 		velocity.z = move_toward(velocity.z, 0, move_speed)
-	move_and_slide()
+
+
+func _update_world_detection() -> void:
+	_world_detection.position = velocity.normalized() * _world_margin
+	_world_detection.force_raycast_update()
