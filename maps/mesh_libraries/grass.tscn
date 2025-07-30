@@ -1,0 +1,96 @@
+[gd_scene load_steps=11 format=3 uid="uid://cp0xlv4jijdya"]
+
+[ext_resource type="ArrayMesh" uid="uid://cey5c8ttww3nc" path="res://maps/mesh_libraries/grass/grass_01.obj" id="1_vomyc"]
+[ext_resource type="ArrayMesh" uid="uid://dgi8nwpssmtj6" path="res://maps/mesh_libraries/grass/grass_02.obj" id="2_1bbbt"]
+[ext_resource type="ArrayMesh" uid="uid://c05dcwg7sxnr6" path="res://maps/mesh_libraries/grass/grass_03.obj" id="3_lhr6b"]
+[ext_resource type="ArrayMesh" uid="uid://bnl6ln3os76o5" path="res://maps/mesh_libraries/grass/grass_04.obj" id="4_jqdo8"]
+[ext_resource type="ArrayMesh" uid="uid://cprmfxrjd8ub3" path="res://maps/mesh_libraries/grass/grass_05.obj" id="5_l0ao1"]
+[ext_resource type="ArrayMesh" uid="uid://bn7r2kxwe128t" path="res://maps/mesh_libraries/grass/grass_06.obj" id="6_2yuvk"]
+[ext_resource type="ArrayMesh" uid="uid://hni6s4r1ct78" path="res://maps/mesh_libraries/grass/grass_07.obj" id="7_mgh6r"]
+[ext_resource type="ArrayMesh" uid="uid://b6fyqa8owsc0a" path="res://maps/mesh_libraries/grass/grass_08.obj" id="8_k3ijw"]
+[ext_resource type="ArrayMesh" uid="uid://fss6xxbp2hd5" path="res://maps/mesh_libraries/grass/grass_09.obj" id="9_y7b52"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s0hv6"]
+
+[node name="Grass" type="Node3D"]
+
+[node name="Grass01" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_vomyc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grass01"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grass01/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_s0hv6")
+
+[node name="Grass02" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_1bbbt")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grass02"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grass02/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_s0hv6")
+
+[node name="Grass03" type="MeshInstance3D" parent="."]
+mesh = ExtResource("3_lhr6b")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grass03"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grass03/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_s0hv6")
+
+[node name="Grass04" type="MeshInstance3D" parent="."]
+mesh = ExtResource("4_jqdo8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grass04"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grass04/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_s0hv6")
+
+[node name="Grass05" type="MeshInstance3D" parent="."]
+mesh = ExtResource("5_l0ao1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grass05"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grass05/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_s0hv6")
+
+[node name="Grass06" type="MeshInstance3D" parent="."]
+mesh = ExtResource("6_2yuvk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grass06"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grass06/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_s0hv6")
+
+[node name="Grass07" type="MeshInstance3D" parent="."]
+mesh = ExtResource("7_mgh6r")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grass07"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grass07/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_s0hv6")
+
+[node name="Grass08" type="MeshInstance3D" parent="."]
+mesh = ExtResource("8_k3ijw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grass08"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grass08/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_s0hv6")
+
+[node name="Grass09" type="MeshInstance3D" parent="."]
+mesh = ExtResource("9_y7b52")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grass09"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grass09/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_s0hv6")
