@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://bvy38o0nn4cf7"]
+[gd_scene load_steps=2 format=3 uid="uid://bvy38o0nn4cf7"]
+
+[ext_resource type="Script" uid="uid://blwgibnbgc1kc" path="res://maps/map.gd" id="1_urvl1"]
 
 [node name="Map" type="Node3D"]
+script = ExtResource("1_urvl1")
+
+[node name="Exits" type="Node3D" parent="."]
