@@ -18,4 +18,4 @@ metadata/_editor_floor_ = Vector3(0, 0, 0)
 [node name="Start" parent="Exits" index="0" instance=ExtResource("3_wp7gb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1.5, 0)
 next_map_path = "uid://dqtqsr4ut82mj"
-next_map_start = Vector3(9, 1.75, 0)
+next_map_start = Vector3(9, 1.5, 0)

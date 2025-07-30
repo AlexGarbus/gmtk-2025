@@ -4,7 +4,7 @@ extends Area3D
 signal overlapped(next_map_path: String, next_map_start: Vector3)
 
 @export_file("*.tscn") var next_map_path: String
-@export var next_map_start := Vector3(0, 1.75, 0)
+@export var next_map_start := Vector3(0, 1.5, 0)
 
 var _overlapping_player := false
 
