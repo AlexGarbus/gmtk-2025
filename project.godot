@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 ScreenManager="*res://globals/screen_manager.gd"
+FlagManager="*res://globals/flag_manager.gd"
 
 [dialogic]
 
