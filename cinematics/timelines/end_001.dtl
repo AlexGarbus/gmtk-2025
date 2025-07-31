@@ -1,4 +1,8 @@
-join tamaki center
+[wait time="3.0"]
+join tamaki right
+if UserData.get_completion_percentage()  ==  100.0:
+	tamaki: Hooray! You've fully completed the game! We will now reset for real this time.
+	[end_timeline]
 tamaki: Oooh, we were so close! Should we try again? Something cool might happen if we reach 100%!
 - Yes
 	tamaki: Hooray! Let''s get moving!

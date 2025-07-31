@@ -11,6 +11,9 @@ func _ready() -> void:
 
 
 func _on_map_finished(next_map_path: String, next_map_start: Vector3) -> void:
+	if next_map_path.is_empty():
+		get_tree().call_deferred("change_scene_to_file", "res://root_scenes/end/end.tscn")
+		return
 	_map.queue_free()
 	var map_scene: PackedScene = load(next_map_path)
 	_map = map_scene.instantiate()

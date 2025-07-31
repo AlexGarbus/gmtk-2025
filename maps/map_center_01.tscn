@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://7jnyog82j4r8"]
+[gd_scene load_steps=16 format=3 uid="uid://7jnyog82j4r8"]
 
 [ext_resource type="PackedScene" uid="uid://bvy38o0nn4cf7" path="res://maps/map.tscn" id="1_q824b"]
 [ext_resource type="MeshLibrary" uid="uid://b7w1rth3ed6e2" path="res://maps/mesh_libraries/grass/grass.tres" id="2_wp7gb"]
@@ -39,6 +39,9 @@ flag_condition = 1
 flag = 3
 metadata/_custom_type_script = "uid://csqncrf7kj4wm"
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_yok54"]
+size = Vector3(3, 1, 2)
+
 [node name="Map" instance=ExtResource("1_q824b")]
 
 [node name="Start" parent="Exits" index="0" instance=ExtResource("3_wp7gb")]
@@ -77,6 +80,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1.5, 0)
 cinematics = Array[ExtResource("8_u5v5a")]([SubResource("Resource_m3ivu")])
 
 [node name="CinematicTrigger2" parent="." index="8" instance=ExtResource("7_yok54")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.5, 0)
 stop_partner = true
 cinematics = Array[ExtResource("8_u5v5a")]([SubResource("Resource_p376l"), SubResource("Resource_hm1of")])
+
+[node name="CollisionShape3D" parent="CinematicTrigger2" index="0"]
+shape = SubResource("BoxShape3D_yok54")
+
+[editable path="CinematicTrigger2"]

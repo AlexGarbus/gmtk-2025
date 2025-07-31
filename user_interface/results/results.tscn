@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://ch6dnaci21jju"]
+
+[ext_resource type="Script" uid="uid://cw5iuncqp8noy" path="res://user_interface/results/results.gd" id="1_oyadt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ctkty"]
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_3wko6"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_0e3cg"]
+font_size = 64
+
+[node name="Results" type="Control" node_paths=PackedStringArray("_percentage_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oyadt")
+_percentage_label = NodePath("Label3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 32.0
+offset_bottom = 120.0
+grow_horizontal = 2
+text = "THE END"
+label_settings = SubResource("LabelSettings_ctkty")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -55.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Your completion rate is:"
+label_settings = SubResource("LabelSettings_3wko6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -12.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "000%"
+label_settings = SubResource("LabelSettings_0e3cg")
+horizontal_alignment = 1
+vertical_alignment = 1
