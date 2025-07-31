@@ -23,8 +23,18 @@ UserData="*res://globals/user_data.gd"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"juniper": "res://cinematics/characters/juniper.dch",
+"tamaki": "res://cinematics/characters/tamaki.dch",
+"tamami": "res://cinematics/characters/tamami.dch"
+}
+directories/dtl_directory={
+"end_001": "res://cinematics/timelines/end_001.dtl",
+"game_001": "res://cinematics/timelines/game_001.dtl",
+"game_002": "res://cinematics/timelines/game_002.dtl",
+"game_003": "res://cinematics/timelines/game_003.dtl",
+"game_004": "res://cinematics/timelines/game_004.dtl"
+}
 glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"

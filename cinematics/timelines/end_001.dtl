@@ -1,0 +1,13 @@
+join tamaki center
+tamaki: Oooh, we were so close! Should we try again? Something cool might happen if we reach 100%!
+- Yes
+	tamaki: Hooray! Let''s get moving!
+	[end_timeline]
+- No
+	label prompt
+	tamaki: C'mon! I really think you should!
+	- Yes
+		tamaki: Hooray! I knew you'd come around!
+		[end_timeline]
+	- No
+		jump prompt
