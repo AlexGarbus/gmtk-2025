@@ -6,15 +6,15 @@ extends StaticBody3D
 
 
 func _ready() -> void:
-	Utils.set_node_enabled(self, _is_on(UserData.get_flag(_flag)))
-	UserData.flag_changed.connect(_on_flag_changed)
+	Utils.set_node_enabled(self, _is_on(UserData.flags.get_bit(_flag)))
+	UserData.flags.changed.connect(_on_flags_changed)
 
 
 func _is_on(flag_value: bool) -> bool:
 	return flag_value and not _invert_flag or not flag_value and _invert_flag
 
 
-func _on_flag_changed(bit: int, value: bool) -> void:
+func _on_flags_changed(bit: int, value: bool) -> void:
 	if not _flag == bit:
 		return
 	Utils.set_node_enabled(self, _is_on(value))

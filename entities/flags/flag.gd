@@ -9,11 +9,11 @@ var _can_interact := true
 
 
 func _ready() -> void:
-	UserData.flag_changed.connect(_on_flag_data_changed)
-	_anim.play("on" if UserData.get_flag(_bit) else "off")
+	UserData.flags.changed.connect(_on_flags_changed)
+	_anim.play("on" if UserData.flags.get_bit(_bit) else "off")
 
 
-func _on_flag_data_changed(bit: int, value: bool) -> void:
+func _on_flags_changed(bit: int, value: bool) -> void:
 	if not _bit == bit:
 		return
 	_anim.play("off_to_on" if value else "on_to_off")
@@ -23,7 +23,7 @@ func _on_body_entered(body: Node3D) -> void:
 	if not _can_interact:
 		return
 	_can_interact = false
-	UserData.set_flag(_bit, not UserData.get_flag(_bit))
+	UserData.flags.flip_bit(_bit)
 
 
 func _on_body_exited(body: Node3D) -> void:
