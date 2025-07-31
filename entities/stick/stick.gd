@@ -11,4 +11,4 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node3D) -> void:
 	UserData.sticks.set_bit(_id, true)
-	Utils.set_node_enabled(self, false)
+	call_deferred("queue_free")
