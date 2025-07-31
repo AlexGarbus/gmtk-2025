@@ -3,10 +3,12 @@ extends Node
 
 signal flag_changed(bit: int, value: bool)
 
+var loops := 0
 var _flags := 0
 
 
 func reset() -> void:
+	loops = 0
 	_flags = 0
 
 
