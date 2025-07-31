@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://n7or506k6lyk"]
+
+[ext_resource type="Script" uid="uid://xvx4f44kxjei" path="res://entities/partner/partner.gd" id="1_sjtbt"]
+[ext_resource type="Texture2D" uid="uid://bqd4xkbmp2hbw" path="res://icon.svg" id="2_o3nre"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qwwpr"]
+
+[node name="Partner" type="CharacterBody3D"]
+script = ExtResource("1_sjtbt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_qwwpr")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+billboard = 1
+texture = ExtResource("2_o3nre")

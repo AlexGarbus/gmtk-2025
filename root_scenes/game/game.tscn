@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4wvnj38tq8xg"]
+[gd_scene load_steps=6 format=3 uid="uid://b4wvnj38tq8xg"]
 
 [ext_resource type="Script" uid="uid://bxqa28sktquik" path="res://root_scenes/game/game.gd" id="1_e02se"]
 [ext_resource type="PackedScene" uid="uid://dqtqsr4ut82mj" path="res://maps/start.tscn" id="1_q50cd"]
 [ext_resource type="PackedScene" uid="uid://tp32v0j1xm37" path="res://entities/player/player.tscn" id="2_s8j50"]
+[ext_resource type="PackedScene" uid="uid://n7or506k6lyk" path="res://entities/partner/partner.tscn" id="3_ep2ts"]
 
 [sub_resource type="Environment" id="Environment_0xm2m"]
 ambient_light_source = 2
@@ -21,5 +22,9 @@ transform = Transform3D(0.707107, -0.5, -0.5, 0, -0.707107, 0.707107, -0.707107,
 
 [node name="Player" parent="." instance=ExtResource("2_s8j50")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="Partner" parent="." node_paths=PackedStringArray("_target") instance=ExtResource("3_ep2ts")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.5, 0)
+_target = NodePath("../Player")
 
 [node name="Map" parent="." instance=ExtResource("1_q50cd")]

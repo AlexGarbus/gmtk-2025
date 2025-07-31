@@ -2,6 +2,7 @@ extends Node
 
 
 @onready var _player: CharacterBody3D = $Player
+@onready var _partner: CharacterBody3D = $Partner
 @onready var _map := $Map
 
 
@@ -16,3 +17,4 @@ func _on_map_finished(next_map_path: String, next_map_start: Vector3) -> void:
 	add_child(_map)
 	_map.finished.connect(_on_map_finished)
 	_player.global_position = next_map_start
+	_partner.global_position = next_map_start
