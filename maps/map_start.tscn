@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dqtqsr4ut82mj"]
+[gd_scene load_steps=10 format=3 uid="uid://dqtqsr4ut82mj"]
 
 [ext_resource type="PackedScene" uid="uid://bvy38o0nn4cf7" path="res://maps/map.tscn" id="1_i78p4"]
 [ext_resource type="MeshLibrary" uid="uid://b7w1rth3ed6e2" path="res://maps/mesh_libraries/grass/grass.tres" id="2_qsust"]
@@ -6,11 +6,21 @@
 [ext_resource type="Script" uid="uid://bvw1ee7pn5gwi" path="res://cinematics/cinematic_autostart.gd" id="4_3ucgc"]
 [ext_resource type="Script" uid="uid://csqncrf7kj4wm" path="res://cinematics/cinematic.gd" id="5_8gi3v"]
 [ext_resource type="Resource" uid="uid://d3a30o4midmq0" path="res://cinematics/timelines/game_001.dtl" id="6_tolus"]
+[ext_resource type="Resource" uid="uid://cxxtx1frcx72r" path="res://cinematics/timelines/game_101.dtl" id="7_8gi3v"]
 
 [sub_resource type="Resource" id="Resource_l3ql6"]
 script = ExtResource("5_8gi3v")
 timeline = ExtResource("6_tolus")
 loop = 0
+cinematic_count = 0
+flag_condition = 0
+flag = 0
+metadata/_custom_type_script = "uid://csqncrf7kj4wm"
+
+[sub_resource type="Resource" id="Resource_tolus"]
+script = ExtResource("5_8gi3v")
+timeline = ExtResource("7_8gi3v")
+loop = 1
 cinematic_count = 0
 flag_condition = 0
 flag = 0
@@ -34,5 +44,5 @@ next_map_start = Vector3(-9, 1.5, 0)
 
 [node name="CinematicAutostart" type="Node" parent="." index="2"]
 script = ExtResource("4_3ucgc")
-cinematics = Array[ExtResource("5_8gi3v")]([SubResource("Resource_l3ql6")])
+cinematics = Array[ExtResource("5_8gi3v")]([SubResource("Resource_l3ql6"), SubResource("Resource_tolus")])
 metadata/_custom_type_script = "uid://bvw1ee7pn5gwi"

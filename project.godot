@@ -33,7 +33,9 @@ directories/dtl_directory={
 "game_001": "res://cinematics/timelines/game_001.dtl",
 "game_002": "res://cinematics/timelines/game_002.dtl",
 "game_003": "res://cinematics/timelines/game_003.dtl",
-"game_004": "res://cinematics/timelines/game_004.dtl"
+"game_004": "res://cinematics/timelines/game_004.dtl",
+"game_101": "res://cinematics/timelines/game_101.dtl",
+"game_102": "res://cinematics/timelines/game_102.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=[]

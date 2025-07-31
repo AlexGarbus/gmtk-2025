@@ -5,7 +5,7 @@ if UserData.get_completion_percentage()  ==  100.0:
 	[end_timeline]
 tamaki: Oooh, we were so close! Should we try again? Something cool might happen if we reach 100%!
 - Yes
-	tamaki: Hooray! Let''s get moving!
+	tamaki: Hooray! Let's get moving!
 	[end_timeline]
 - No
 	label prompt

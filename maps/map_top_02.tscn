@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://bsv30px267b22"]
+
+[ext_resource type="PackedScene" uid="uid://bvy38o0nn4cf7" path="res://maps/map.tscn" id="1_a5qmk"]
+[ext_resource type="PackedScene" uid="uid://b5rl62apvkqv8" path="res://entities/exit/exit.tscn" id="2_0cvca"]
+[ext_resource type="MeshLibrary" uid="uid://b7w1rth3ed6e2" path="res://maps/mesh_libraries/grass/grass.tres" id="2_r7k5w"]
+[ext_resource type="PackedScene" uid="uid://bkh683hsrk7pr" path="res://entities/stick/stick.tscn" id="3_oxv7x"]
+[ext_resource type="PackedScene" uid="uid://jhc6vw0qvjvr" path="res://entities/barriers/barrier_04.tscn" id="4_0cvca"]
+
+[node name="Map" instance=ExtResource("1_a5qmk")]
+
+[node name="Top01" parent="Exits" index="0" instance=ExtResource("2_0cvca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -7)
+next_map_path = "uid://du88ote63rgob"
+next_map_start = Vector3(19, 1.5, 5)
+
+[node name="Top03" parent="Exits" index="1" instance=ExtResource("2_0cvca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1.5, 2)
+next_map_path = "uid://cr47d1hwutycl"
+next_map_start = Vector3(-7, 1.5, 0)
+
+[node name="Center02" parent="Exits" index="2" instance=ExtResource("2_0cvca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1.5, 8)
+next_map_path = "uid://ca7f1egc53bw3"
+next_map_start = Vector3(0, 1.5, -5)
+
+[node name="Center03" parent="Exits" index="3" instance=ExtResource("2_0cvca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1.5, 8)
+next_map_path = "uid://mfma44fsq7v2"
+next_map_start = Vector3(-6, 1.5, -11)
+
+[node name="GridMap" type="GridMap" parent="." index="1"]
+mesh_library = ExtResource("2_r7k5w")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(0, 65535, 1048576, 65535, 65535, 1048576, 65535, 0, 1048576, 0, 0, 1048576, 65535, 1, 1048576, 0, 1, 1048576, 65534, 0, 1048576, 65534, 65535, 1048576, 65533, 65535, 1048576, 65535, 65534, 1048576, 0, 65534, 1048578, 1, 65535, 1048576, 1, 0, 1048576, 65535, 65533, 1441794, 65535, 65532, 1441794, 65535, 65531, 1441794, 65535, 65530, 1441794, 65535, 65529, 1441794, 65535, 65528, 1441794, 0, 65528, 1048578, 0, 65529, 1048578, 0, 65530, 1048578, 0, 65531, 1048578, 0, 65532, 1048578, 0, 65533, 1048578, 65534, 65534, 1048576, 65533, 65534, 655363, 1, 65534, 1048576, 2, 65534, 1048579, 2, 65535, 1048576, 2, 0, 1048576, 2, 1, 1048576, 1, 1, 1048576, 1, 2, 2, 2, 2, 2, 0, 2, 2, 65535, 2, 2, 65534, 1, 1048576, 65533, 1, 1048576, 65533, 0, 1048576, 65533, 2, 2, 65534, 2, 2, 65532, 0, 1441794, 65532, 1, 1048576, 65532, 2, 2, 3, 0, 1048578, 3, 1, 1048576, 3, 2, 2, 3, 65535, 1048579, 65532, 65535, 655363, 4, 2, 2, 5, 2, 2, 6, 2, 2, 7, 2, 2, 8, 2, 2, 9, 2, 2, 4, 1, 655362, 5, 1, 655362, 6, 1, 655362, 7, 1, 655362, 8, 1, 655362, 9, 1, 0, 65531, 1, 655362, 65530, 1, 655362, 65529, 1, 655362, 65528, 1, 655362, 65527, 1, 655362, 65526, 1, 655362, 65526, 2, 2, 65527, 2, 2, 65528, 2, 2, 65529, 2, 2, 65530, 2, 2, 65531, 2, 2, 65525, 3, 1048578, 65525, 4, 1048578, 65525, 5, 1048578, 65525, 6, 1048578, 65525, 7, 1048578, 65525, 8, 1048578, 65524, 8, 1441794, 65524, 7, 1441794, 65524, 6, 1441794, 65524, 5, 1441794, 65524, 4, 1441794, 65524, 3, 1441794, 65524, 2, 1441794, 65525, 1, 655362, 65524, 1, 655363, 65525, 2, 655360, 10, 3, 1441794, 10, 4, 1441794, 10, 5, 1441794, 10, 6, 1441794, 10, 7, 1441794, 10, 8, 1441794, 11, 8, 1048578, 11, 7, 1048578, 11, 6, 1048578, 11, 5, 1048578, 11, 4, 1048578, 11, 3, 1048578, 9, 3, 1441795, 9, 0, 655363, 12, 0, 1048579, 12, 3, 3, 10, 1, 0, 10, 2, 0, 11, 0, 0, 10, 0, 0, 11, 1, 0, 11, 2, 0, 12, 1, 0, 12, 2, 0, 14, 2, 2, 13, 2, 2, 15, 2, 2, 16, 2, 2, 17, 2, 2, 18, 2, 2, 13, 1, 655362, 14, 1, 655362, 15, 1, 655362, 16, 1, 655362, 17, 1, 655362, 18, 1, 655362, 19, 2, 2, 20, 2, 2, 19, 1, 655362, 20, 1, 655362)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="Stick" parent="." index="2" instance=ExtResource("3_oxv7x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 0)
+_id = 11
+
+[node name="Barrier04" parent="." index="3" instance=ExtResource("4_0cvca")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15, 1, 2)
+_invert_flag = true
