@@ -6,7 +6,8 @@ extends StaticBody3D
 
 
 func _ready() -> void:
-	Utils.set_node_enabled(self, _is_on(UserData.flags.get_bit(_flag)))
+	if not _is_on(UserData.flags.get_bit(_flag)):
+		Utils.set_node_enabled(self, false)
 	UserData.flags.changed.connect(_on_flags_changed)
 
 
