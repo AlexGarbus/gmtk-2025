@@ -11,7 +11,7 @@ func _ready() -> void:
 	add_collision_exception_with(_target)
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if _target.global_position.distance_to(global_position) <= _min_target_distance:
 		return
 	var direction := (_target.global_position - global_position).normalized()
