@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ii4hrxu4gb21"]
+
+[ext_resource type="PackedScene" uid="uid://c38c3b5f3gdo0" path="res://entities/flags/flag_base.tscn" id="1_5lrgy"]
+
+[node name="Flag04" instance=ExtResource("1_5lrgy")]
+_bit = 4
+
+[node name="Sprite3D" parent="." index="2"]
+modulate = Color(1, 0.313726, 0, 1)
