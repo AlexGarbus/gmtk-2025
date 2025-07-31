@@ -5,6 +5,7 @@ extends CharacterBody3D
 @export var _min_target_distance := 1.0
 
 var _move_speed := 5.0
+var can_move := true
 
 
 func _ready() -> void:
@@ -12,6 +13,8 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:
+	if not can_move:
+		return
 	if _target.global_position.distance_to(global_position) <= _min_target_distance:
 		return
 	var direction := (_target.global_position - global_position).normalized()

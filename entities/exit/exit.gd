@@ -13,8 +13,8 @@ func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 
 
-func _on_body_entered(_body: Node3D) -> void:
-	if _overlapping_player:
+func _on_body_entered(body: Node3D) -> void:
+	if _overlapping_player or not (body as Player).partner.can_move:
 		return
 	_overlapping_player = true
 	overlapped.emit(next_map_path, next_map_start)

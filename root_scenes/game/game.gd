@@ -1,7 +1,7 @@
 extends Node
 
 
-@onready var _player: CharacterBody3D = $Player
+@onready var _player: Player = $Player
 @onready var _partner: CharacterBody3D = $Partner
 @onready var _map := $Map
 
