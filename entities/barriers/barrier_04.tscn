@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://jhc6vw0qvjvr"]
+
+[ext_resource type="PackedScene" uid="uid://csyjultveakx3" path="res://entities/barriers/barrier_base.tscn" id="1_llnwc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_llnwc"]
+albedo_color = Color(1, 0.313726, 0, 1)
+
+[node name="Barrier04" instance=ExtResource("1_llnwc")]
+_flag = 4
+
+[node name="MeshInstance3D" parent="." index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_llnwc")
