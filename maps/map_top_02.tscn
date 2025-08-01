@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://bvy38o0nn4cf7" path="res://maps/map.tscn" id="1_a5qmk"]
 [ext_resource type="PackedScene" uid="uid://b5rl62apvkqv8" path="res://entities/exit/exit.tscn" id="2_0cvca"]
-[ext_resource type="MeshLibrary" uid="uid://b7w1rth3ed6e2" path="res://maps/mesh_libraries/grass/grass.tres" id="2_r7k5w"]
+[ext_resource type="MeshLibrary" uid="uid://b7w1rth3ed6e2" path="res://maps/mesh_library/mesh_library.tres" id="2_r7k5w"]
 [ext_resource type="PackedScene" uid="uid://bkh683hsrk7pr" path="res://entities/stick/stick.tscn" id="3_oxv7x"]
-[ext_resource type="PackedScene" uid="uid://jhc6vw0qvjvr" path="res://entities/barriers/barrier_04.tscn" id="4_0cvca"]
+[ext_resource type="PackedScene" uid="uid://jhc6vw0qvjvr" path="res://entities/barriers/barrier_04/barrier_04.tscn" id="4_0cvca"]
 
 [node name="Map" instance=ExtResource("1_a5qmk")]
 

@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://bvy38o0nn4cf7" path="res://maps/map.tscn" id="1_sijb5"]
 [ext_resource type="PackedScene" uid="uid://b5rl62apvkqv8" path="res://entities/exit/exit.tscn" id="2_73ray"]
-[ext_resource type="MeshLibrary" uid="uid://b7w1rth3ed6e2" path="res://maps/mesh_libraries/grass/grass.tres" id="3_i62ao"]
-[ext_resource type="PackedScene" uid="uid://bnafh860ig0xl" path="res://entities/barriers/barrier_01.tscn" id="3_ir2cr"]
-[ext_resource type="PackedScene" uid="uid://jhc6vw0qvjvr" path="res://entities/barriers/barrier_04.tscn" id="5_pdt5p"]
+[ext_resource type="MeshLibrary" uid="uid://b7w1rth3ed6e2" path="res://maps/mesh_library/mesh_library.tres" id="3_i62ao"]
+[ext_resource type="PackedScene" uid="uid://bnafh860ig0xl" path="res://entities/barriers/barrier_01/barrier_01.tscn" id="3_ir2cr"]
+[ext_resource type="PackedScene" uid="uid://jhc6vw0qvjvr" path="res://entities/barriers/barrier_04/barrier_04.tscn" id="5_pdt5p"]
 [ext_resource type="PackedScene" uid="uid://bkh683hsrk7pr" path="res://entities/stick/stick.tscn" id="6_ir2cr"]
 
 [node name="Map" instance=ExtResource("1_sijb5")]

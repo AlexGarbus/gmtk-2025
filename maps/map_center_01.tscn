@@ -1,10 +1,10 @@
 [gd_scene load_steps=16 format=3 uid="uid://7jnyog82j4r8"]
 
 [ext_resource type="PackedScene" uid="uid://bvy38o0nn4cf7" path="res://maps/map.tscn" id="1_q824b"]
-[ext_resource type="MeshLibrary" uid="uid://b7w1rth3ed6e2" path="res://maps/mesh_libraries/grass/grass.tres" id="2_wp7gb"]
+[ext_resource type="MeshLibrary" uid="uid://b7w1rth3ed6e2" path="res://maps/mesh_library/mesh_library.tres" id="2_wp7gb"]
 [ext_resource type="PackedScene" uid="uid://b5rl62apvkqv8" path="res://entities/exit/exit.tscn" id="3_wp7gb"]
 [ext_resource type="PackedScene" uid="uid://d3q8tdnuljoyw" path="res://entities/flags/flag_03.tscn" id="4_wn0t5"]
-[ext_resource type="PackedScene" uid="uid://ds8ei5lxw3ayv" path="res://entities/barriers/barrier_03.tscn" id="5_ipbt5"]
+[ext_resource type="PackedScene" uid="uid://ds8ei5lxw3ayv" path="res://entities/barriers/barrier_03/barrier_03.tscn" id="5_ipbt5"]
 [ext_resource type="PackedScene" uid="uid://bkh683hsrk7pr" path="res://entities/stick/stick.tscn" id="6_ipbt5"]
 [ext_resource type="PackedScene" uid="uid://cwkjbmk5164sj" path="res://entities/cinematic_trigger/cinematic_trigger.tscn" id="7_yok54"]
 [ext_resource type="Script" uid="uid://csqncrf7kj4wm" path="res://cinematics/cinematic.gd" id="8_u5v5a"]

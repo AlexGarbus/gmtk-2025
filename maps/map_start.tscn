@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dqtqsr4ut82mj"]
 
 [ext_resource type="PackedScene" uid="uid://bvy38o0nn4cf7" path="res://maps/map.tscn" id="1_i78p4"]
-[ext_resource type="MeshLibrary" uid="uid://b7w1rth3ed6e2" path="res://maps/mesh_libraries/grass/grass.tres" id="2_qsust"]
+[ext_resource type="MeshLibrary" uid="uid://b7w1rth3ed6e2" path="res://maps/mesh_library/mesh_library.tres" id="2_qsust"]
 [ext_resource type="PackedScene" uid="uid://b5rl62apvkqv8" path="res://entities/exit/exit.tscn" id="3_txpt3"]
 [ext_resource type="Script" uid="uid://bvw1ee7pn5gwi" path="res://cinematics/cinematic_autostart.gd" id="4_3ucgc"]
 [ext_resource type="Script" uid="uid://csqncrf7kj4wm" path="res://cinematics/cinematic.gd" id="5_8gi3v"]
