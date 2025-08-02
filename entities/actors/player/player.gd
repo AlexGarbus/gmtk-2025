@@ -1,5 +1,5 @@
 class_name Player
-extends CharacterBody3D
+extends Actor
 
 
 @export var move_speed := 5.0
@@ -7,7 +7,6 @@ extends CharacterBody3D
 @onready var partner := $"../Partner"
 @onready var _world_detection := $WorldDetection
 
-var can_move: bool
 var _world_margin: float
 
 

@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://tp32v0j1xm37"]
 
-[ext_resource type="Script" uid="uid://brqdpd3lxo7k3" path="res://entities/player/player.gd" id="1_abrql"]
-[ext_resource type="Texture2D" uid="uid://cxwtkeh6dtui5" path="res://entities/player/player.png" id="2_sglur"]
-[ext_resource type="Script" uid="uid://01ebkk2amg3t" path="res://common/character_sprite_3d.gd" id="3_bls4j"]
-[ext_resource type="Script" uid="uid://burkkks40l76k" path="res://entities/player/player_camera.gd" id="3_sglur"]
+[ext_resource type="Script" uid="uid://brqdpd3lxo7k3" path="res://entities/actors/player/player.gd" id="1_abrql"]
+[ext_resource type="Texture2D" uid="uid://cxwtkeh6dtui5" path="res://entities/actors/player/player.png" id="2_sglur"]
+[ext_resource type="Script" uid="uid://01ebkk2amg3t" path="res://entities/actors/actor_sprite.gd" id="3_bls4j"]
+[ext_resource type="Script" uid="uid://burkkks40l76k" path="res://entities/actors/player/player_camera.gd" id="3_sglur"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bls4j"]
 
@@ -36,7 +36,7 @@ script = ExtResource("1_abrql")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_bls4j")
 
-[node name="CharacterSprite3D" type="AnimatedSprite3D" parent="." node_paths=PackedStringArray("body")]
+[node name="Sprite" type="AnimatedSprite3D" parent="." node_paths=PackedStringArray("body")]
 pixel_size = 0.031
 billboard = 1
 double_sided = false

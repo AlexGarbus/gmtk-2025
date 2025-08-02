@@ -1,8 +1,8 @@
-class_name CharacterSprite3D
+class_name ActorSprite
 extends AnimatedSprite3D
 
 
-@export var body: CharacterBody3D
+@export var body: Actor
 @export var frame_time := 1.0
 
 
@@ -23,4 +23,5 @@ func _physics_process(delta: float) -> void:
 	else:
 		if not _anim_tween.is_running():
 			_anim_tween.play()
-		flip_h = body.velocity.x < 0
+		if not body.velocity.x == 0:
+			flip_h = body.velocity.x < 0
