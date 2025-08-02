@@ -67,7 +67,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1, 0)
 _invert_flag = true
 
 [node name="Barrier03" parent="." index="6" instance=ExtResource("5_fdytn")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, 1, -3)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, 1, -4)
 _invert_flag = true
 
 [node name="Flag02" parent="." index="7" instance=ExtResource("6_c2dug")]
