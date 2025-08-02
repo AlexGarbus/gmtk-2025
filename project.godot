@@ -34,12 +34,19 @@ directories/dtl_directory={
 "game_002": "res://cinematics/timelines/game_002.dtl",
 "game_003": "res://cinematics/timelines/game_003.dtl",
 "game_004": "res://cinematics/timelines/game_004.dtl",
+"game_005": "res://cinematics/timelines/game_005.dtl",
+"game_006": "res://cinematics/timelines/game_006.dtl",
 "game_101": "res://cinematics/timelines/game_101.dtl",
-"game_102": "res://cinematics/timelines/game_102.dtl"
+"game_102": "res://cinematics/timelines/game_102.dtl",
+"game_103": "res://cinematics/timelines/game_103.dtl",
+"game_201": "res://cinematics/timelines/game_201.dtl",
+"game_202": "res://cinematics/timelines/game_202.dtl",
+"game_203": "res://cinematics/timelines/game_203.dtl",
+"game_204": "res://cinematics/timelines/game_204.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=[]
-layout/default_style="Default"
+layout/default_style=""
 variables={}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01

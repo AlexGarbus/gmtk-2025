@@ -2,6 +2,7 @@ extends Node
 
 
 const MAX_STICKS := 13
+const MAX_LOOPS := 2
 
 var cinematics := 0
 var loops := 0
@@ -22,7 +23,7 @@ func reset() -> void:
 
 func initialize_next_loop() -> void:
 	cinematics = 0
-	loops += 1
+	loops = min(loops + 1, MAX_LOOPS)
 	sticks.value = 0
 
 

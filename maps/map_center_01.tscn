@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://7jnyog82j4r8"]
+[gd_scene load_steps=18 format=3 uid="uid://7jnyog82j4r8"]
 
 [ext_resource type="PackedScene" uid="uid://bvy38o0nn4cf7" path="res://maps/map.tscn" id="1_q824b"]
 [ext_resource type="MeshLibrary" uid="uid://b7w1rth3ed6e2" path="res://maps/mesh_library/mesh_library.tres" id="2_wp7gb"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://csqncrf7kj4wm" path="res://cinematics/cinematic.gd" id="8_u5v5a"]
 [ext_resource type="Resource" uid="uid://y7nghqm5uydd" path="res://cinematics/timelines/game_002.dtl" id="9_o3hq5"]
 [ext_resource type="Resource" uid="uid://nd338eyyo53j" path="res://cinematics/timelines/game_003.dtl" id="10_sxa1v"]
+[ext_resource type="Resource" uid="uid://cgqwslh2fr2u4" path="res://cinematics/timelines/game_202.dtl" id="10_u5v5a"]
 [ext_resource type="Resource" uid="uid://gthjjj6rmfb7" path="res://cinematics/timelines/game_004.dtl" id="11_umxmn"]
 
 [sub_resource type="Resource" id="Resource_m3ivu"]
@@ -19,6 +20,17 @@ loop = 0
 cinematic_count = 1
 flag_condition = 0
 flag = 0
+stick_condition = 0
+metadata/_custom_type_script = "uid://csqncrf7kj4wm"
+
+[sub_resource type="Resource" id="Resource_o3hq5"]
+script = ExtResource("8_u5v5a")
+timeline = ExtResource("10_u5v5a")
+loop = 2
+cinematic_count = 1
+flag_condition = 0
+flag = 0
+stick_condition = 0
 metadata/_custom_type_script = "uid://csqncrf7kj4wm"
 
 [sub_resource type="Resource" id="Resource_p376l"]
@@ -28,6 +40,7 @@ loop = 0
 cinematic_count = 2
 flag_condition = 0
 flag = 0
+stick_condition = 0
 metadata/_custom_type_script = "uid://csqncrf7kj4wm"
 
 [sub_resource type="Resource" id="Resource_hm1of"]
@@ -37,6 +50,7 @@ loop = 0
 cinematic_count = 3
 flag_condition = 1
 flag = 3
+stick_condition = 0
 metadata/_custom_type_script = "uid://csqncrf7kj4wm"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yok54"]
@@ -92,7 +106,7 @@ _id = 2
 
 [node name="CinematicTrigger" parent="." index="8" instance=ExtResource("7_yok54")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1.5, 0)
-cinematics = Array[ExtResource("8_u5v5a")]([SubResource("Resource_m3ivu")])
+cinematics = Array[ExtResource("8_u5v5a")]([SubResource("Resource_m3ivu"), SubResource("Resource_o3hq5")])
 
 [node name="CinematicTrigger2" parent="." index="9" instance=ExtResource("7_yok54")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.5, 0)

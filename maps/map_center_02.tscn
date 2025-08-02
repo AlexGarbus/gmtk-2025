@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ca7f1egc53bw3"]
+[gd_scene load_steps=14 format=3 uid="uid://ca7f1egc53bw3"]
 
 [ext_resource type="PackedScene" uid="uid://bvy38o0nn4cf7" path="res://maps/map.tscn" id="1_gxfs3"]
 [ext_resource type="MeshLibrary" uid="uid://b7w1rth3ed6e2" path="res://maps/mesh_library/mesh_library.tres" id="2_fdytn"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://csqncrf7kj4wm" path="res://cinematics/cinematic.gd" id="5_r6uwl"]
 [ext_resource type="PackedScene" uid="uid://cobm0s6bxyg0x" path="res://entities/flags/flag_02.tscn" id="6_c2dug"]
 [ext_resource type="Resource" uid="uid://c08d5hwcb1mha" path="res://cinematics/timelines/game_102.dtl" id="6_cyx8b"]
+[ext_resource type="Resource" uid="uid://br7a5xta4n2he" path="res://cinematics/timelines/game_005.dtl" id="7_cyx8b"]
 [ext_resource type="PackedScene" uid="uid://bkh683hsrk7pr" path="res://entities/stick/stick.tscn" id="7_fdytn"]
 
 [sub_resource type="Resource" id="Resource_6w74h"]
@@ -18,6 +19,17 @@ loop = 1
 cinematic_count = 1
 flag_condition = 0
 flag = 0
+stick_condition = 0
+metadata/_custom_type_script = "uid://csqncrf7kj4wm"
+
+[sub_resource type="Resource" id="Resource_dtj0s"]
+script = ExtResource("5_r6uwl")
+timeline = ExtResource("7_cyx8b")
+loop = 0
+cinematic_count = 4
+flag_condition = 0
+flag = 0
+stick_condition = 0
 metadata/_custom_type_script = "uid://csqncrf7kj4wm"
 
 [node name="Map" instance=ExtResource("1_gxfs3")]
@@ -55,28 +67,32 @@ metadata/_editor_floor_ = Vector3(0, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 cinematics = Array[ExtResource("5_r6uwl")]([SubResource("Resource_6w74h")])
 
-[node name="Barrier01" parent="." index="3" instance=ExtResource("4_gxfs3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 6)
+[node name="CinematicTrigger2" parent="." index="3" instance=ExtResource("4_r6uwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.5, 0)
+cinematics = Array[ExtResource("5_r6uwl")]([SubResource("Resource_dtj0s")])
+
+[node name="Barrier01" parent="." index="4" instance=ExtResource("4_gxfs3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 4)
 _invert_flag = true
 
-[node name="Barrier02" parent="." index="4" instance=ExtResource("5_fdytn")]
+[node name="Barrier02" parent="." index="5" instance=ExtResource("5_fdytn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 0)
 
-[node name="Barrier04" parent="." index="5" instance=ExtResource("5_fdytn")]
+[node name="Barrier04" parent="." index="6" instance=ExtResource("5_fdytn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1, 0)
 _invert_flag = true
 
-[node name="Barrier03" parent="." index="6" instance=ExtResource("5_fdytn")]
+[node name="Barrier03" parent="." index="7" instance=ExtResource("5_fdytn")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, 1, -4)
 _invert_flag = true
 
-[node name="Flag02" parent="." index="7" instance=ExtResource("6_c2dug")]
+[node name="Flag02" parent="." index="8" instance=ExtResource("6_c2dug")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, 0)
 
-[node name="Stick" parent="." index="8" instance=ExtResource("7_fdytn")]
+[node name="Stick" parent="." index="9" instance=ExtResource("7_fdytn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 0)
 _id = 3
 
-[node name="Stick2" parent="." index="9" instance=ExtResource("7_fdytn")]
+[node name="Stick2" parent="." index="10" instance=ExtResource("7_fdytn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 1, 0)
 _id = 4

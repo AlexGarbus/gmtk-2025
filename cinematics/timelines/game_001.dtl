@@ -1,3 +1,24 @@
-join tamami left
-join tamaki right [mirrored="true"]
-tamami: [Intro cutscene]
+join tamaki leftmost [mirrored="true"]
+join tamami rightmost
+tamaki: Good morning, Tamami! Isn't it just a beautiful day?
+- Yes!
+	tamami: It sure is, bro!
+	tamaki: Now that's the spirit!
+- Sure...
+	tamami: If you say so...
+	tamaki: Why so glum? Too early for you?
+tamaki: We've got a big day ahead of us! I hear that the villagers on the other side of Flag Forest are eagerly awaiting our hand-made shoelaces!
+- F-Flag Forest?!
+	tamami: F-Flag Forest?! You mean the one with all the flag flowers?
+	tamaki: The very one! You're not too scared again, are you?
+- Not Flag Forest!
+	tamami: Not Flag Forest! That'll take forever! And I can't stand those flag flowers and all the odd stuff they do!
+tamaki: If it's too much trouble for you, then I'll just go myself!
+- Again?
+	tamami: You mean like last time, when you got lost at the entrance? For a week?
+	tamaki: There's so many trees! I can't figure out which ones are pointing in which direction!
+	tamami: Whether I like it or not, I think I need to lead the way.
+- No way!
+	tamami: N-no way! I'm brave! I can do this! I-in fact, I'll lead!
+	tamaki: Having a change of face, eh? I like it!
+tamaki: Alright! Let's move out!

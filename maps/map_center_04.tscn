@@ -1,11 +1,49 @@
-[gd_scene load_steps=7 format=3 uid="uid://bv5jlxce5dw1u"]
+[gd_scene load_steps=16 format=3 uid="uid://bv5jlxce5dw1u"]
 
 [ext_resource type="PackedScene" uid="uid://bvy38o0nn4cf7" path="res://maps/map.tscn" id="1_sijb5"]
 [ext_resource type="PackedScene" uid="uid://b5rl62apvkqv8" path="res://entities/exit/exit.tscn" id="2_73ray"]
 [ext_resource type="MeshLibrary" uid="uid://b7w1rth3ed6e2" path="res://maps/mesh_library/mesh_library.tres" id="3_i62ao"]
 [ext_resource type="PackedScene" uid="uid://bnafh860ig0xl" path="res://entities/barriers/barrier_01/barrier_01.tscn" id="3_ir2cr"]
+[ext_resource type="PackedScene" uid="uid://cwkjbmk5164sj" path="res://entities/cinematic_trigger/cinematic_trigger.tscn" id="4_qbb12"]
+[ext_resource type="Script" uid="uid://csqncrf7kj4wm" path="res://cinematics/cinematic.gd" id="5_6k8ka"]
 [ext_resource type="PackedScene" uid="uid://jhc6vw0qvjvr" path="res://entities/barriers/barrier_04/barrier_04.tscn" id="5_pdt5p"]
+[ext_resource type="Resource" uid="uid://doesluq7nhem6" path="res://cinematics/timelines/game_006.dtl" id="6_8ttux"]
 [ext_resource type="PackedScene" uid="uid://bkh683hsrk7pr" path="res://entities/stick/stick.tscn" id="6_ir2cr"]
+[ext_resource type="Resource" uid="uid://yi2vhvfqotuw" path="res://cinematics/timelines/game_103.dtl" id="7_q5447"]
+[ext_resource type="Resource" uid="uid://lo7fpjefgw7v" path="res://cinematics/timelines/game_204.dtl" id="8_6k8ka"]
+
+[sub_resource type="Resource" id="Resource_cvg0u"]
+script = ExtResource("5_6k8ka")
+timeline = ExtResource("6_8ttux")
+loop = 0
+cinematic_count = 5
+flag_condition = 0
+flag = 0
+stick_condition = 0
+metadata/_custom_type_script = "uid://csqncrf7kj4wm"
+
+[sub_resource type="Resource" id="Resource_q7qlt"]
+script = ExtResource("5_6k8ka")
+timeline = ExtResource("7_q5447")
+loop = 1
+cinematic_count = 2
+flag_condition = 0
+flag = 0
+stick_condition = 0
+metadata/_custom_type_script = "uid://csqncrf7kj4wm"
+
+[sub_resource type="Resource" id="Resource_8ttux"]
+script = ExtResource("5_6k8ka")
+timeline = ExtResource("8_6k8ka")
+loop = 2
+cinematic_count = 2
+flag_condition = 0
+flag = 0
+stick_condition = 1
+metadata/_custom_type_script = "uid://csqncrf7kj4wm"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v7f7j"]
+size = Vector3(2, 1, 10)
 
 [node name="Map" instance=ExtResource("1_sijb5")]
 
@@ -37,22 +75,31 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
-[node name="Barrier04" parent="." index="2" instance=ExtResource("5_pdt5p")]
+[node name="CinematicTrigger" parent="." index="2" instance=ExtResource("4_qbb12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.5, 0)
+cinematics = Array[ExtResource("5_6k8ka")]([SubResource("Resource_cvg0u"), SubResource("Resource_q7qlt"), SubResource("Resource_8ttux")])
+
+[node name="CollisionShape3D" parent="CinematicTrigger" index="0"]
+shape = SubResource("BoxShape3D_v7f7j")
+
+[node name="Barrier04" parent="." index="3" instance=ExtResource("5_pdt5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -4)
 _invert_flag = true
 
-[node name="Barrier01" parent="." index="3" instance=ExtResource("3_ir2cr")]
+[node name="Barrier01" parent="." index="4" instance=ExtResource("3_ir2cr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 4)
 _invert_flag = true
 
-[node name="Stick" parent="." index="4" instance=ExtResource("6_ir2cr")]
+[node name="Stick" parent="." index="5" instance=ExtResource("6_ir2cr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 0)
 _id = 7
 
-[node name="Stick2" parent="." index="5" instance=ExtResource("6_ir2cr")]
+[node name="Stick2" parent="." index="6" instance=ExtResource("6_ir2cr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 0)
 _id = 8
 
-[node name="Stick3" parent="." index="6" instance=ExtResource("6_ir2cr")]
+[node name="Stick3" parent="." index="7" instance=ExtResource("6_ir2cr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 0)
 _id = 9
+
+[editable path="CinematicTrigger"]

@@ -1,1 +1,16 @@
-[First barrier cutscene, flag OFF]
+join tamaki leftmost [mirrored="true"]
+join tamami rightmost
+tamaki: Ugh, a dead end... We're doomed! What should we do now?
+- Get rid of the vine.
+	tamami: I think we just need to get rid of the vine.
+	tamaki: But how will we ever do something like that?
+- Find a flag flower.
+	tamami: I think we need to find a flag flower.
+	tamaki: Of course, flag flowers switch the states of Flag Forest's scenery between on and off! But where will we ever find one?
+tamaki: What a puzzler! I need to think about this...
+- I'll go look.
+	tamami: While you work on, um, thinking, I'll go have a look around.
+	tamaki: You do that, sis! I'll just be... thinking...
+- Have fun.
+	tamami: You have fun with that. In the meantime, I think I'll go look around.
+	tamaki: Will do, sis! You have yourself some fun, too!
