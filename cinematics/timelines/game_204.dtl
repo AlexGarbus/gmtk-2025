@@ -11,7 +11,7 @@ tamaki: Hey sis! I think we have enough sticks to reach the top now!
 	tamami: That is true... Alright, let's do it!
 leave tamaki
 leave tamami
-[background scene="res://cinematics/backgrounds/black.tscn" fade="0.0"]
+[background scene="res://cinematics/backgrounds/dark_grey.tscn" fade="1.0"]
 [wait time="1.0"]
 *ladder-building noises*
 join tamaki leftmost [mirrored="true"]
