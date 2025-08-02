@@ -1,12 +1,133 @@
-[gd_scene load_steps=3 format=3 uid="uid://bnafh860ig0xl"]
+[gd_scene load_steps=7 format=3 uid="uid://bnafh860ig0xl"]
 
 [ext_resource type="PackedScene" uid="uid://csyjultveakx3" path="res://entities/barriers/barrier_base.tscn" id="1_0he1r"]
+[ext_resource type="PackedScene" uid="uid://c1rvku8kgvosu" path="res://entities/barriers/barrier_01/barrier_01.glb" id="2_v7dmq"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wiw1q"]
-albedo_color = Color(1, 0, 0.25098, 1)
+[sub_resource type="Animation" id="Animation_ieym0"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Model:scale:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Model:scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Model:scale:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Model:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_qsauh"]
+resource_name = "on"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Model:scale:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.1, 0, 0.1, 0, 0.75, -0.1, 0, 0.1, 0, 1, -0.1, 0, 0.1, 0),
+"times": PackedFloat32Array(0, 0.25, 0.5)
+}
+
+[sub_resource type="Animation" id="Animation_au3mx"]
+resource_name = "on_to_off"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Model:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.025, 0, 0.025, 0, 1.25, -0.025, 0, 0.025, 0, 0.1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.1, 0.450011)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Model:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.025, 0, 0.025, 0, 0.5, -0.025, 0, 0.025, 0, 0.1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.1, 0.450011)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Model:scale:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.025, 0, 0.025, 0, 1.25, -0.025, 0, 0.025, 0, 0.1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.1, 0.450011)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Model:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(1, 0, 1),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0.05, 0, -3.25, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.45, 0.5)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ugwle"]
+_data = {
+&"RESET": SubResource("Animation_ieym0"),
+&"on": SubResource("Animation_qsauh"),
+&"on_to_off": SubResource("Animation_au3mx")
+}
 
 [node name="Barrier01" instance=ExtResource("1_0he1r")]
 _flag = 1
 
-[node name="MeshInstance3D" parent="." index="1"]
-surface_material_override/0 = SubResource("StandardMaterial3D_wiw1q")
+[node name="Model" parent="." index="1" instance=ExtResource("2_v7dmq")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+libraries = {
+&"": SubResource("AnimationLibrary_ugwle")
+}
+next/on_to_off = &"on"

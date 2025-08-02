@@ -10,7 +10,7 @@
 [node name="Center02" parent="Exits" index="0" instance=ExtResource("2_sdyuj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 1.5, -7)
 next_map_path = "uid://ca7f1egc53bw3"
-next_map_start = Vector3(0, 1.5, 8)
+next_map_start = Vector3(-1, 1.5, 8)
 
 [node name="Center04" parent="Exits" index="1" instance=ExtResource("2_sdyuj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 1.5, -7)

@@ -19,9 +19,13 @@ func _ready() -> void:
 
 func _initialize_animation() -> void:
 	if _activated:
-		_anim.play("toggle")
+		if _anim.has_animation("on"):
+			_anim.play("on")
+			return
+		else:
+			_anim.play("on_to_off")
 	else:
-		_anim.play_backwards("toggle")
+		_anim.play_backwards("on_to_off")
 	_anim.advance(0)
 	_anim.pause()
 
@@ -35,10 +39,9 @@ func _on_flags_changed(bit: int, value: bool) -> void:
 		return
 	if _activated == _is_flag_condition_met(value):
 		return
-	print("TOGGLE")
 	_activated = not _activated
 	_collision_shape.set_deferred("disabled", not _activated)
 	if _activated:
-		_anim.play_backwards("toggle")
+		_anim.play_backwards("on_to_off")
 	else:
-		_anim.play("toggle")
+		_anim.play("on_to_off")
