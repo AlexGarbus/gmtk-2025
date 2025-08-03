@@ -1,7 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://bnafh860ig0xl"]
+[gd_scene load_steps=9 format=3 uid="uid://bnafh860ig0xl"]
 
 [ext_resource type="PackedScene" uid="uid://csyjultveakx3" path="res://entities/barriers/barrier_base.tscn" id="1_0he1r"]
 [ext_resource type="PackedScene" uid="uid://c1rvku8kgvosu" path="res://entities/barriers/barrier_01/barrier_01.glb" id="2_v7dmq"]
+[ext_resource type="Texture2D" uid="uid://bp3r6jdgkrlvd" path="res://entities/barriers/barrier_01/barrier_01_0.png" id="3_au3mx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qsauh"]
+shading_mode = 0
+albedo_texture = ExtResource("3_au3mx")
+texture_filter = 0
+disable_receive_shadows = true
 
 [sub_resource type="Animation" id="Animation_ieym0"]
 length = 0.001
@@ -126,8 +133,14 @@ _flag = 1
 
 [node name="Model" parent="." index="1" instance=ExtResource("2_v7dmq")]
 
+[node name="sphere" parent="Model/Node" index="0"]
+cast_shadow = 0
+surface_material_override/0 = SubResource("StandardMaterial3D_qsauh")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
 libraries = {
 &"": SubResource("AnimationLibrary_ugwle")
 }
 next/on_to_off = &"on"
+
+[editable path="Model"]

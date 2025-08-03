@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://n7or506k6lyk" path="res://entities/actors/partner/partner.tscn" id="3_ep2ts"]
 
 [sub_resource type="Environment" id="Environment_0xm2m"]
+background_mode = 1
+background_color = Color(0.0470588, 0.180392, 0.266667, 1)
+background_energy_multiplier = 0.5
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_energy = 0.25

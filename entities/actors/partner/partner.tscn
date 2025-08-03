@@ -40,6 +40,7 @@ shape = SubResource("BoxShape3D_qwwpr")
 pixel_size = 0.031
 billboard = 1
 double_sided = false
+alpha_cut = 1
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_n6py8")
 script = ExtResource("4_etlyt")
