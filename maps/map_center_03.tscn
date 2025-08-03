@@ -4,8 +4,8 @@
 [ext_resource type="MeshLibrary" uid="uid://b7w1rth3ed6e2" path="res://maps/mesh_library/mesh_library.tres" id="2_e1iq1"]
 [ext_resource type="PackedScene" uid="uid://b5rl62apvkqv8" path="res://entities/exit/exit.tscn" id="2_kramo"]
 [ext_resource type="PackedScene" uid="uid://bnafh860ig0xl" path="res://entities/barriers/barrier_01/barrier_01.tscn" id="4_7i6ru"]
-[ext_resource type="PackedScene" uid="uid://d28n3j5mbktx5" path="res://entities/flags/flag_01.tscn" id="5_wudvc"]
-[ext_resource type="PackedScene" uid="uid://d3q8tdnuljoyw" path="res://entities/flags/flag_03.tscn" id="6_6sfxv"]
+[ext_resource type="PackedScene" uid="uid://d28n3j5mbktx5" path="res://entities/flags/flag_01/flag_01.tscn" id="5_wudvc"]
+[ext_resource type="PackedScene" uid="uid://d3q8tdnuljoyw" path="res://entities/flags/flag_03/flag_03.tscn" id="6_6sfxv"]
 [ext_resource type="PackedScene" uid="uid://ds8ei5lxw3ayv" path="res://entities/barriers/barrier_03/barrier_03.tscn" id="7_o85nw"]
 [ext_resource type="PackedScene" uid="uid://bkh683hsrk7pr" path="res://entities/stick/stick.tscn" id="8_7i6ru"]
 
@@ -63,3 +63,11 @@ _id = 5
 [node name="Stick3" parent="." index="9" instance=ExtResource("8_7i6ru")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 0)
 _id = 6
+
+[node name="Stick4" parent="." index="10" instance=ExtResource("8_7i6ru")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -2)
+_id = 17
+
+[node name="Stick5" parent="." index="11" instance=ExtResource("8_7i6ru")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1, 1)
+_id = 18

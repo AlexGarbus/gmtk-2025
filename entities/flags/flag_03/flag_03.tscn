@@ -1,9 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3q8tdnuljoyw"]
+[gd_scene load_steps=3 format=3 uid="uid://d3q8tdnuljoyw"]
 
 [ext_resource type="PackedScene" uid="uid://c38c3b5f3gdo0" path="res://entities/flags/flag_base.tscn" id="1_20rkn"]
+[ext_resource type="AudioStream" uid="uid://bpej8qk6hx6a1" path="res://entities/flags/flag_03/flag_03.wav" id="2_rikfk"]
 
 [node name="Flag03" instance=ExtResource("1_20rkn")]
 _bit = 3
 
 [node name="Sprite3D" parent="." index="2"]
 modulate = Color(0.2, 0.596078, 0.294118, 1)
+
+[node name="AudioStreamPlayer" parent="." index="4"]
+stream = ExtResource("2_rikfk")

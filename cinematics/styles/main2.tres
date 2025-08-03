@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=13 format=3 uid="uid://yao174xpatnk"]
+
+[ext_resource type="Resource" uid="uid://byh30pgumf8ap" path="res://cinematics/styles/main.tres" id="1_0ne2k"]
+[ext_resource type="Script" uid="uid://cxc4paujhwk3f" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_txfy8"]
+[ext_resource type="Script" uid="uid://byhsvynm4uvte" path="res://addons/dialogic/Resources/dialogic_style.gd" id="3_ote4a"]
+
+[sub_resource type="Resource" id="Resource_a7me0"]
+script = ExtResource("2_txfy8")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_pwqqm"]
+script = ExtResource("2_txfy8")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_ujkky"]
+script = ExtResource("2_txfy8")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_wsjhx"]
+script = ExtResource("2_txfy8")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_1cn73"]
+script = ExtResource("2_txfy8")
+overrides = {
+"name_label_alignment": "1"
+}
+
+[sub_resource type="Resource" id="Resource_qwg40"]
+script = ExtResource("2_txfy8")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_cft73"]
+script = ExtResource("2_txfy8")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_iipwp"]
+script = ExtResource("2_txfy8")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_awnov"]
+script = ExtResource("2_txfy8")
+overrides = {}
+
+[resource]
+script = ExtResource("3_ote4a")
+name = "main2"
+inherits = ExtResource("1_0ne2k")
+layer_list = Array[String](["10", "11", "12", "13", "14", "15", "16", "17"])
+layer_info = {
+"": SubResource("Resource_a7me0"),
+"10": SubResource("Resource_pwqqm"),
+"11": SubResource("Resource_ujkky"),
+"12": SubResource("Resource_wsjhx"),
+"13": SubResource("Resource_1cn73"),
+"14": SubResource("Resource_qwg40"),
+"15": SubResource("Resource_cft73"),
+"16": SubResource("Resource_iipwp"),
+"17": SubResource("Resource_awnov")
+}
+base_overrides = {}
+layers = Array[ExtResource("2_txfy8")]([])
+metadata/_latest_layer = "13"

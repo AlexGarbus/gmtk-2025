@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cwkjbmk5164sj" path="res://entities/cinematic_trigger/cinematic_trigger.tscn" id="4_r6uwl"]
 [ext_resource type="PackedScene" uid="uid://cnboomruxa0il" path="res://entities/barriers/barrier_02/barrier_02.tscn" id="5_fdytn"]
 [ext_resource type="Script" uid="uid://csqncrf7kj4wm" path="res://cinematics/cinematic.gd" id="5_r6uwl"]
-[ext_resource type="PackedScene" uid="uid://cobm0s6bxyg0x" path="res://entities/flags/flag_02.tscn" id="6_c2dug"]
+[ext_resource type="PackedScene" uid="uid://cobm0s6bxyg0x" path="res://entities/flags/flag_02/flag_02.tscn" id="6_c2dug"]
 [ext_resource type="Resource" uid="uid://c08d5hwcb1mha" path="res://cinematics/timelines/game_102.dtl" id="6_cyx8b"]
 [ext_resource type="Resource" uid="uid://br7a5xta4n2he" path="res://cinematics/timelines/game_005.dtl" id="7_cyx8b"]
 [ext_resource type="PackedScene" uid="uid://bkh683hsrk7pr" path="res://entities/stick/stick.tscn" id="7_fdytn"]
@@ -96,3 +96,11 @@ _id = 3
 [node name="Stick2" parent="." index="10" instance=ExtResource("7_fdytn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 1, 0)
 _id = 4
+
+[node name="Stick3" parent="." index="11" instance=ExtResource("7_fdytn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 0)
+_id = 15
+
+[node name="Stick4" parent="." index="12" instance=ExtResource("7_fdytn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 2)
+_id = 16

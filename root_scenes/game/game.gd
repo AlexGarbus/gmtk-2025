@@ -15,9 +15,10 @@ func _on_map_finished(next_map_path: String, next_map_start: Vector3) -> void:
 		get_tree().call_deferred("change_scene_to_file", "res://root_scenes/end/end.tscn")
 		return
 	_map.queue_free()
+	await get_tree().process_frame
 	var map_scene: PackedScene = load(next_map_path)
 	_map = map_scene.instantiate()
-	add_child(_map)
 	_map.finished.connect(_on_map_finished)
 	_player.global_position = next_map_start
 	_partner.global_position = next_map_start
+	add_child(_map)

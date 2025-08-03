@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="GMTK 2025"
+config/name="Flag Forest"
 run/main_scene="uid://b4wvnj38tq8xg"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"

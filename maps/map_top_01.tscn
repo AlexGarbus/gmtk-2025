@@ -4,7 +4,7 @@
 [ext_resource type="MeshLibrary" uid="uid://b7w1rth3ed6e2" path="res://maps/mesh_library/mesh_library.tres" id="2_6wp1x"]
 [ext_resource type="PackedScene" uid="uid://b5rl62apvkqv8" path="res://entities/exit/exit.tscn" id="2_u75ol"]
 [ext_resource type="PackedScene" uid="uid://bkh683hsrk7pr" path="res://entities/stick/stick.tscn" id="3_u75ol"]
-[ext_resource type="PackedScene" uid="uid://ii4hrxu4gb21" path="res://entities/flags/flag_04.tscn" id="4_ji3x2"]
+[ext_resource type="PackedScene" uid="uid://ii4hrxu4gb21" path="res://entities/flags/flag_04/flag_04.tscn" id="4_ji3x2"]
 [ext_resource type="PackedScene" uid="uid://jhc6vw0qvjvr" path="res://entities/barriers/barrier_04/barrier_04.tscn" id="5_oakui"]
 
 [node name="Map" instance=ExtResource("1_5dl5c")]

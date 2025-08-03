@@ -1,7 +1,7 @@
 extends Node
 
 
-const MAX_STICKS := 13
+const MAX_STICKS := 20
 const MAX_LOOPS := 2
 
 var cinematics := 0

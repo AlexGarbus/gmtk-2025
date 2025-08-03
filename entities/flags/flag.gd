@@ -4,6 +4,7 @@ extends Area3D
 @export var _bit := 0
 
 @onready var _anim: AnimationPlayer = $AnimationPlayer
+@onready var _audio: AudioStreamPlayer = $AudioStreamPlayer
 
 var _can_interact := true
 
@@ -17,6 +18,7 @@ func _on_flags_changed(bit: int, value: bool) -> void:
 	if not _bit == bit:
 		return
 	_anim.play("off_to_on" if value else "on_to_off")
+	_audio.play()
 
 
 func _on_body_entered(body: Node3D) -> void:

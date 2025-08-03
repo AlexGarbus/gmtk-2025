@@ -1,7 +1,11 @@
 [wait time="3.0"]
-join tamaki leftmost
+join tamaki leftmost [mirrored="true"]
 if UserData.get_completion_percentage()  ==  100.0:
 	tamaki: Hooray! You've fully completed the game! Thank you so much for your help! Not that I needed it, but thanks all the same! The game will now reset for real this time. See ya in the next life!
+	CREATED BY\: Alex Garbus, Candle The Cat, & HAPPYmoon
+	MADE WITH\: Godot Engine & Dialogic
+	SOUNDS FROM PIXABAY BY\: Aman Kumar, u_51wf53qyw2, u_vdwj1c20kz, Alice_soundz, adamgryu, Alex_Jauk, floraphonic
+	THE END
 	[end_timeline]
 tamaki: Oooh, you were so close!
 tamaki: Would you like to try again? Something cool might happen if you reach 100%!
