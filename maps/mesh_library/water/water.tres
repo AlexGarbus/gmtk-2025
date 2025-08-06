@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://q1a6yxyi6e37"]
+
+[ext_resource type="Texture2D" uid="uid://cjem24bd7kxg1" path="res://maps/mesh_library/water/water.png" id="1_qqdia"]
+
+[resource]
+albedo_texture = ExtResource("1_qqdia")
+texture_filter = 0

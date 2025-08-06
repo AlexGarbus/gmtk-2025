@@ -1,0 +1,117 @@
+[gd_scene load_steps=17 format=3 uid="uid://bv5jlxce5dw1u"]
+
+[ext_resource type="PackedScene" uid="uid://bvy38o0nn4cf7" path="res://maps/map.tscn" id="1_sijb5"]
+[ext_resource type="PackedScene" uid="uid://b5rl62apvkqv8" path="res://entities/exit/exit.tscn" id="2_73ray"]
+[ext_resource type="MeshLibrary" uid="uid://b7w1rth3ed6e2" path="res://maps/mesh_library/mesh_library.tres" id="3_i62ao"]
+[ext_resource type="PackedScene" uid="uid://bnafh860ig0xl" path="res://entities/barriers/barrier_01/barrier_01.tscn" id="3_ir2cr"]
+[ext_resource type="PackedScene" uid="uid://cwkjbmk5164sj" path="res://entities/cinematic_trigger/cinematic_trigger.tscn" id="4_qbb12"]
+[ext_resource type="Script" uid="uid://csqncrf7kj4wm" path="res://cinematics/cinematic.gd" id="5_6k8ka"]
+[ext_resource type="PackedScene" uid="uid://jhc6vw0qvjvr" path="res://entities/barriers/barrier_04/barrier_04.tscn" id="5_pdt5p"]
+[ext_resource type="Resource" uid="uid://doesluq7nhem6" path="res://cinematics/timelines/game_006.dtl" id="6_8ttux"]
+[ext_resource type="PackedScene" uid="uid://bkh683hsrk7pr" path="res://entities/stick/stick.tscn" id="6_ir2cr"]
+[ext_resource type="Resource" uid="uid://yi2vhvfqotuw" path="res://cinematics/timelines/game_103.dtl" id="7_q5447"]
+[ext_resource type="Resource" uid="uid://lo7fpjefgw7v" path="res://cinematics/timelines/game_204.dtl" id="8_6k8ka"]
+[ext_resource type="PackedScene" uid="uid://c77uparvr0ggt" path="res://entities/decorations/tree/tree.gltf" id="9_8ttux"]
+
+[sub_resource type="Resource" id="Resource_cvg0u"]
+script = ExtResource("5_6k8ka")
+timeline = ExtResource("6_8ttux")
+loop = 0
+cinematic_count = 5
+flag_condition = 0
+flag = 0
+stick_condition = 0
+metadata/_custom_type_script = "uid://csqncrf7kj4wm"
+
+[sub_resource type="Resource" id="Resource_q7qlt"]
+script = ExtResource("5_6k8ka")
+timeline = ExtResource("7_q5447")
+loop = 1
+cinematic_count = 2
+flag_condition = 0
+flag = 0
+stick_condition = 0
+metadata/_custom_type_script = "uid://csqncrf7kj4wm"
+
+[sub_resource type="Resource" id="Resource_8ttux"]
+script = ExtResource("5_6k8ka")
+timeline = ExtResource("8_6k8ka")
+loop = 2
+cinematic_count = 2
+flag_condition = 0
+flag = 0
+stick_condition = 1
+metadata/_custom_type_script = "uid://csqncrf7kj4wm"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v7f7j"]
+size = Vector3(2, 1, 10)
+
+[node name="Map" instance=ExtResource("1_sijb5")]
+
+[node name="Center03" parent="Exits" index="0" instance=ExtResource("2_73ray")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1.5, 0)
+next_map_path = "uid://mfma44fsq7v2"
+next_map_start = Vector3(9, 1.5, 0)
+
+[node name="Top03" parent="Exits" index="1" instance=ExtResource("2_73ray")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1.5, -8)
+next_map_path = "uid://cr47d1hwutycl"
+next_map_start = Vector3(0, 1.5, 7)
+
+[node name="Top04" parent="Exits" index="2" instance=ExtResource("2_73ray")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, 8)
+next_map_path = "uid://c0nsg816pew5p"
+next_map_start = Vector3(21, 1.5, -5)
+
+[node name="End" parent="Exits" index="3" instance=ExtResource("2_73ray")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1.5, 0)
+next_map_start = Vector3(9, 1.5, 0)
+
+[node name="GridMap" type="GridMap" parent="." index="1"]
+mesh_library = ExtResource("3_i62ao")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65526, 0, 0, 65526, 65535, 0, 65527, 65535, 0, 65527, 0, 0, 65528, 65535, 0, 65528, 0, 0, 6, 65535, 0, 6, 0, 0, 7, 65535, 0, 7, 0, 0, 8, 65535, 0, 8, 0, 0, 9, 0, 0, 9, 65535, 0, 10, 0, 12, 11, 0, 12, 10, 65535, 12, 11, 65535, 12, 65524, 65535, 12, 65524, 0, 12, 65525, 65535, 12, 65525, 0, 12, 65532, 65535, 0, 65532, 0, 2, 65533, 65535, 0, 65533, 0, 2, 65534, 65533, 0, 65534, 65534, 0, 65534, 65535, 0, 65534, 0, 0, 65534, 1, 1441794, 65534, 2, 1441795, 65535, 65531, 0, 65535, 65532, 0, 65535, 65533, 0, 65535, 65534, 0, 65535, 65535, 0, 65535, 0, 0, 65535, 1, 0, 65535, 2, 655360, 65535, 3, 1441794, 65535, 4, 1441795, 0, 65531, 0, 0, 65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 655360, 0, 3, 655360, 0, 4, 2, 1, 65531, 0, 1, 65532, 0, 1, 65533, 0, 1, 65534, 0, 1, 65535, 0, 1, 0, 0, 1, 1, 0, 1, 2, 655360, 1, 3, 655360, 1, 4, 2, 2, 65531, 0, 2, 65532, 0, 2, 1, 655360, 2, 2, 655360, 2, 3, 655360, 2, 4, 2, 3, 65531, 0, 3, 65532, 0, 3, 65533, 0, 3, 65534, 0, 3, 1, 655360, 3, 2, 655360, 3, 3, 655360, 3, 4, 2, 4, 65531, 0, 4, 65532, 0, 4, 65533, 0, 4, 65534, 0, 4, 65535, 0, 4, 0, 0, 4, 1, 655360, 4, 2, 655360, 4, 3, 655360, 4, 4, 2, 5, 65531, 0, 5, 65532, 0, 5, 65533, 0, 5, 65534, 0, 5, 65535, 0, 5, 0, 0, 5, 1, 655360, 5, 2, 655360, 5, 3, 655360, 5, 4, 2, 6, 65531, 0, 6, 65532, 0, 6, 65533, 0, 6, 65534, 0, 6, 1, 655360, 6, 2, 655360, 6, 3, 1048578, 6, 4, 3, 7, 65533, 0, 7, 65534, 0, 7, 1, 1048578, 7, 2, 2, 65528, 65534, 0, 65528, 65533, 0, 65528, 65532, 0, 65528, 65531, 0, 65528, 65530, 0, 65528, 65529, 0, 65528, 65528, 12, 65528, 65527, 12, 65529, 65534, 0, 65529, 65533, 0, 65529, 65532, 0, 65529, 65531, 0, 65529, 65527, 12, 65529, 65528, 12, 65529, 65529, 0, 65529, 65530, 0, 65529, 1, 0, 65529, 2, 0, 65529, 3, 0, 65529, 4, 0, 65529, 5, 0, 65529, 6, 0, 65529, 7, 12, 65529, 8, 12, 65530, 1, 1048578, 65530, 2, 1048578, 65530, 3, 1048578, 65530, 4, 1048578, 65530, 5, 0, 65530, 6, 0, 65530, 7, 12, 65530, 8, 12, 65531, 0, 2, 65531, 65535, 0, 65530, 65535, 0, 65529, 65535, 0, 65529, 0, 0, 65530, 0, 0, 131061, 1, 13, 131060, 1, 13, 131059, 1, 13, 131058, 1, 13, 131058, 0, 13, 131058, 65535, 13, 131059, 65535, 13, 131059, 0, 13, 131058, 65534, 13, 131059, 65534, 13, 131060, 65534, 13, 131061, 65534, 13, 131062, 65534, 13, 131063, 65534, 13, 131063, 65533, 13, 131063, 65532, 13, 131063, 65531, 13, 131063, 65530, 13, 131063, 65529, 13, 131063, 65528, 13, 131063, 65527, 13, 131063, 65526, 13, 131064, 65526, 13, 131065, 65526, 13, 131066, 65526, 13, 131066, 65527, 13, 131066, 65528, 13, 131066, 65529, 13, 131066, 65530, 13, 131066, 65531, 13, 131066, 65532, 13, 131066, 65533, 13, 131066, 65534, 13, 131067, 65534, 13, 131068, 65534, 13, 131069, 65534, 13, 131069, 65533, 13, 131070, 65532, 13, 131069, 65532, 13, 131070, 65531, 13, 131070, 65530, 13, 131071, 65530, 13, 65536, 65530, 13, 65537, 65530, 13, 65538, 65530, 13, 65539, 65530, 13, 65540, 65530, 13, 65541, 65530, 13, 65542, 65530, 13, 65543, 65530, 13, 65543, 65531, 13, 65543, 65532, 13, 65544, 65532, 13, 65544, 65533, 13, 65544, 65534, 13, 65545, 65534, 13, 65546, 65534, 13, 65547, 65534, 13, 65548, 65534, 13, 65548, 65535, 13, 65548, 0, 13, 65546, 1, 13, 65547, 1, 13, 65548, 1, 13, 65549, 1, 13, 65549, 0, 13, 65549, 65535, 13, 65549, 65534, 13, 131064, 1, 13, 131064, 2, 13, 131064, 3, 13, 131064, 4, 13, 131064, 5, 13, 131064, 6, 13, 131064, 7, 13, 131064, 8, 13, 131064, 9, 13, 131065, 9, 13, 131066, 9, 13, 131064, 10, 13, 131065, 10, 13, 131066, 10, 13, 131067, 10, 13, 131067, 9, 13, 131067, 8, 13, 131067, 7, 13, 131067, 6, 13, 131063, 1, 13, 131062, 1, 13, 65531, 5, 13, -2, 3, 9, -3, 1, 9, -3, 2, 9, -3, 3, 9, -4, 4, 9, -5, 4, 9, -5, 3, 9, -5, 2, 9, -5, 1, 9, -4, 2, 9, -4, 3, 9, 65544, 2, 13, 65544, 1, 13, 65545, 1, 13, -4, 1, 9, -3, 4, 9, -2, 4, 9, -3, 6, 9, -2, 6, 9, -2, 5, 9, -3, 5, 9, -3, 10, 9, -3, 9, 9, -3, 8, 9, -3, 7, 9, -2, 7, 9, -2, 8, 9, -2, 9, 9, -2, 10, 9, 65532, 5, 13, 65532, 10, 13, 65532, 9, 13, 65532, 8, 13, 65532, 7, 13, 65532, 6, 13, 65535, 5, 13, 65535, 6, 13, 65535, 7, 13, 65535, 8, 13, 65535, 9, 13, 65535, 10, 13, 7, 5, 13, 6, 5, 13, 5, 5, 13, 4, 5, 13, 3, 5, 13, 2, 5, 13, 1, 5, 13, 0, 5, 13, 7, 3, 13, 7, 4, 13, 8, 3, 13, 2, 65533, 0, 2, 65534, 0, 3, 0, 1441792, 2, 0, 1441792, 2, 65535, 1441792, 3, 65535, 1441792, 8, 2, 3)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="CinematicTrigger" parent="." index="2" instance=ExtResource("4_qbb12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.5, 0)
+cinematics = Array[ExtResource("5_6k8ka")]([SubResource("Resource_cvg0u"), SubResource("Resource_q7qlt"), SubResource("Resource_8ttux")])
+
+[node name="CollisionShape3D" parent="CinematicTrigger" index="0"]
+shape = SubResource("BoxShape3D_v7f7j")
+
+[node name="Tree" parent="." index="3" instance=ExtResource("9_8ttux")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 0)
+
+[node name="Barrier04" parent="." index="4" instance=ExtResource("5_pdt5p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -4)
+_invert_flag = true
+
+[node name="Barrier01" parent="." index="5" instance=ExtResource("3_ir2cr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 4)
+_invert_flag = true
+
+[node name="Stick" parent="." index="6" instance=ExtResource("6_ir2cr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 0)
+_id = 7
+
+[node name="Stick2" parent="." index="7" instance=ExtResource("6_ir2cr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 0)
+_id = 8
+
+[node name="Stick3" parent="." index="8" instance=ExtResource("6_ir2cr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 0)
+_id = 9
+
+[node name="Stick4" parent="." index="9" instance=ExtResource("6_ir2cr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 2)
+_id = 19
+
+[node name="Stick5" parent="." index="10" instance=ExtResource("6_ir2cr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -2)
+_id = 20
+
+[editable path="CinematicTrigger"]

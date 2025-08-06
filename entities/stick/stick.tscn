@@ -1,0 +1,66 @@
+[gd_scene load_steps=8 format=3 uid="uid://bkh683hsrk7pr"]
+
+[ext_resource type="PackedScene" uid="uid://wndis87ob7xl" path="res://entities/stick/stick.glb" id="1_n2b3a"]
+[ext_resource type="Script" uid="uid://b8p8x1rey54ow" path="res://entities/stick/stick.gd" id="1_xdxi4"]
+[ext_resource type="AudioStream" uid="uid://dkau8tq4egjke" path="res://entities/stick/collect.wav" id="3_h63b4"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xdxi4"]
+
+[sub_resource type="Animation" id="Animation_xdxi4"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Model:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_n2b3a"]
+resource_name = "hop"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Model:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(1, 0, 1, 0, 0),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, 0.25, -0.1, 0, 0.1, 0, 0, 0, 0, 0, 0, 0.15, -0.05, 0, 0.05, 0, 0, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.5, 0.6)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h63b4"]
+_data = {
+&"RESET": SubResource("Animation_xdxi4"),
+&"hop": SubResource("Animation_n2b3a")
+}
+
+[node name="Stick" type="Area3D"]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("1_xdxi4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_xdxi4")
+
+[node name="Model" parent="." instance=ExtResource("1_n2b3a")]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_h63b4")
+}
+autoplay = "hop"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_h63b4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

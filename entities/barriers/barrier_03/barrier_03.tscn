@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://ds8ei5lxw3ayv"]
+
+[ext_resource type="PackedScene" uid="uid://csyjultveakx3" path="res://entities/barriers/barrier_base.tscn" id="1_xp8uc"]
+[ext_resource type="PackedScene" uid="uid://rcq824h58kp0" path="res://entities/barriers/barrier_03/barrier_03.glb" id="2_0ierl"]
+
+[sub_resource type="Animation" id="Animation_dqq25"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Model:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Model:rotation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_0ierl"]
+resource_name = "on_to_off"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Model:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 1),
+"points": PackedFloat32Array(0, -0.25, 0, 0.4, 0, -3.25, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Model:rotation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 1),
+"points": PackedFloat32Array(0, -0.25, 0, 0.4, 0, -3.14, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mn5gg"]
+_data = {
+&"RESET": SubResource("Animation_dqq25"),
+&"on_to_off": SubResource("Animation_0ierl")
+}
+
+[node name="Barrier03" instance=ExtResource("1_xp8uc")]
+_flag = 3
+
+[node name="Model" parent="." index="1" instance=ExtResource("2_0ierl")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+libraries = {
+&"": SubResource("AnimationLibrary_mn5gg")
+}

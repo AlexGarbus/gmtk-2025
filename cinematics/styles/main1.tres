@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=13 format=3 uid="uid://uvd3dg3g3yi6"]
+
+[ext_resource type="Resource" uid="uid://byh30pgumf8ap" path="res://cinematics/styles/main.tres" id="1_21tj4"]
+[ext_resource type="Script" uid="uid://cxc4paujhwk3f" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_gpojs"]
+[ext_resource type="Script" uid="uid://byhsvynm4uvte" path="res://addons/dialogic/Resources/dialogic_style.gd" id="3_lhf3y"]
+
+[sub_resource type="Resource" id="Resource_yuygo"]
+script = ExtResource("2_gpojs")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_5jtqc"]
+script = ExtResource("2_gpojs")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_3gnnu"]
+script = ExtResource("2_gpojs")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_nx43e"]
+script = ExtResource("2_gpojs")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_a2xux"]
+script = ExtResource("2_gpojs")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_8j1np"]
+script = ExtResource("2_gpojs")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_h3tbi"]
+script = ExtResource("2_gpojs")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_2un3u"]
+script = ExtResource("2_gpojs")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_7gay3"]
+script = ExtResource("2_gpojs")
+overrides = {}
+
+[resource]
+script = ExtResource("3_lhf3y")
+name = "main1"
+inherits = ExtResource("1_21tj4")
+layer_list = Array[String](["10", "11", "12", "13", "14", "15", "16", "17"])
+layer_info = {
+"": SubResource("Resource_yuygo"),
+"10": SubResource("Resource_5jtqc"),
+"11": SubResource("Resource_3gnnu"),
+"12": SubResource("Resource_nx43e"),
+"13": SubResource("Resource_a2xux"),
+"14": SubResource("Resource_8j1np"),
+"15": SubResource("Resource_h3tbi"),
+"16": SubResource("Resource_2un3u"),
+"17": SubResource("Resource_7gay3")
+}
+base_overrides = {}
+layers = Array[ExtResource("2_gpojs")]([])
+metadata/_latest_layer = "13"

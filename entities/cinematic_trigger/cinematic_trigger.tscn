@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwkjbmk5164sj"]
+
+[ext_resource type="Script" uid="uid://dj17cktm3w00h" path="res://entities/cinematic_trigger/cinematic_trigger.gd" id="1_pmlf4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k2hxj"]
+size = Vector3(2, 1, 2)
+
+[node name="CinematicTrigger" type="Area3D"]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("1_pmlf4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_k2hxj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

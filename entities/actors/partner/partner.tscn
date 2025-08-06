@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://n7or506k6lyk"]
+
+[ext_resource type="Script" uid="uid://xvx4f44kxjei" path="res://entities/actors/partner/partner.gd" id="1_sjtbt"]
+[ext_resource type="Texture2D" uid="uid://ca21wqky2vvkf" path="res://entities/actors/partner/partner.png" id="3_qwwpr"]
+[ext_resource type="Script" uid="uid://01ebkk2amg3t" path="res://entities/actors/actor_sprite.gd" id="4_etlyt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qwwpr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00r4c"]
+atlas = ExtResource("3_qwwpr")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjfxn"]
+atlas = ExtResource("3_qwwpr")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n6py8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00r4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjfxn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Partner" type="CharacterBody3D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_sjtbt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_qwwpr")
+
+[node name="Sprite" type="AnimatedSprite3D" parent="." node_paths=PackedStringArray("body")]
+pixel_size = 0.031
+billboard = 1
+double_sided = false
+alpha_cut = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_n6py8")
+script = ExtResource("4_etlyt")
+body = NodePath("..")
+frame_time = 0.25
+metadata/_custom_type_script = "uid://01ebkk2amg3t"

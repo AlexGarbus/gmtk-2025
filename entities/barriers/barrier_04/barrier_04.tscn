@@ -1,0 +1,93 @@
+[gd_scene load_steps=6 format=3 uid="uid://jhc6vw0qvjvr"]
+
+[ext_resource type="PackedScene" uid="uid://csyjultveakx3" path="res://entities/barriers/barrier_base.tscn" id="1_llnwc"]
+[ext_resource type="PackedScene" uid="uid://og8p5s7upmy2" path="res://entities/barriers/barrier_04/barrier_04.glb" id="2_rurlt"]
+
+[sub_resource type="Animation" id="Animation_1xbk1"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Model:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Model:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Model:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_715wh"]
+resource_name = "on_to_off"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Model:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(1, 0, 0, 0, 0, 0, 1),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, 0.05, -0.025, 0, 0.025, 0, -0.15, -0.025, 0, 0.025, 0, 0.25, -0.025, 0, 0.025, 0, -0.25, -0.025, 0, 0.025, 0, 0.25, -0.025, 0, 0.025, 0, 0, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.05, 0.15, 0.25, 0.35, 0.45, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Model:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 1),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -2.25, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Model:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_16ay2"]
+_data = {
+&"RESET": SubResource("Animation_1xbk1"),
+&"on_to_off": SubResource("Animation_715wh")
+}
+
+[node name="Barrier04" instance=ExtResource("1_llnwc")]
+_flag = 4
+
+[node name="Model" parent="." index="1" instance=ExtResource("2_rurlt")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+libraries = {
+&"": SubResource("AnimationLibrary_16ay2")
+}

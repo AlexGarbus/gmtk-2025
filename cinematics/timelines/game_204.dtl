@@ -1,0 +1,97 @@
+join tamaki leftmost [mirrored="true"]
+join tamami rightmost
+tamaki: Hey Tama! I think we have enough sticks to reach the top now!
+- Yay!
+	tamami: Hooray! Maybe we'll find a clue about what's happening to Flag Forest.
+	tamaki: Or treasure!
+	tamami: Or treasure...
+- Awesome...
+	tamami: Awesome, Maki. Now we can extend this already extended trip even longer.
+	tamaki: Aw, c'mon! Don't you want to know what's at the top? It could be something to do with why the flag flowers stopped resetting.
+	tamami: That is true... Alright, let's do it!
+leave tamaki
+leave tamami
+[background scene="res://cinematics/backgrounds/dark_grey.tscn" fade="1.0"]
+[wait time="1.0"]
+*ladder-building noises*
+join tamaki leftmost [mirrored="true"]
+join tamami rightmost
+tamaki: Dang it! The sticks just won't stick together.
+tamaki: ...hahaha, stick. That's funny.
+tamaki: But this isn't! What are we supposed to do?
+- I do not know.
+	tamami: I do not know, Maki.
+	tamaki: ...what a minute! Not! Knot!! Tama, you're a genius!
+	tamami: H-huh?
+- We need to go.
+	tamami: We should just go. The villagers are gonna get cranky if we're late with their shoelaces.
+	tamaki: ...wait a second! That's it! Why didn't I think of it before?
+	tamami: Probably because you tend not to think before doing.
+tamaki: We'll tie the sticks together with our shoelaces!
+tamami: Of course! Why didn't I think of that!
+*ladder-tying noises*
+tamaki: Alright, I think that's secure enough!
+tamami: I sure hope so...
+*ladder-climbing noises*
+tamami: There's a... house? Up here?
+tamaki: This looks like somebody's home, alright?
+*snore*
+tamami: Ah!! What was that?
+tamaki: Look! Over in the bed! There's somebody here.
+tamami: I don't think we should w-
+tamaki: HEY!! WAKE UP SLEEPY TREE HEAD!!!
+tamami: ...wake them up.
+join juniper center
+juniper: *yawn* What's going on?
+juniper: OUCH!!! MY HEAD!!!
+tamaki: Ooh, sorry about that. The ceiling in here is a bit low.
+juniper: Ow... Why'd you wake me up?
+juniper: I was having an amazing dream about a handsome plumber jumping on sentient mushrooms.
+- Who are you?
+	tamami: Who are you? And what are you doing up here?
+	juniper: You don't know who I am? I guess nobody really does.
+- What?
+	tamami: What on earth are you talking about?
+	juniper: Eh, never mind. It's not important.
+juniper: My name is Juniper, and I am the guardian of Flag Forest.
+tamaki: Guardian? What do you mean?
+juniper: I have been given the duty of resetting the flags of this forest every time a being comes through here.
+juniper: I am to protect the forest by returning it to its natural state, and I am to protect the people by ensuring the safety of their travel.
+- Is that why...?
+	tamami: Is that why the flags are always off when we come here? It was you resetting them?
+	juniper: Correct.
+- Been given? By who?
+	tamami: What do you mean you've been given this duty? Who gave it to you?
+	juniper: I know not who. I only know that it is my duty.
+tamaki: Then why did you stop?
+juniper: I did not mean too. But I was just so tired.
+juniper: I have had to run around the forest, resetting flags for so long that my shoes have worn out.
+juniper: My beloved loafers simply will not stay on my feet any longer. But they were so comfy, and running without them is so tiring.
+juniper: I truly apologize if I caused you any inconvenience.
+- We can help!
+	tamami: I think I know how we can solve your problem!
+	tamaki: And I think she's thinking what I'm thinking! And I usually don't think!
+- No, I'm sorry.
+	tamami: No, I'm sorry. We shouldn't have made you work so hard.
+	tamaki: Same. But I think I know how we can make this right.
+juniper: Oh, and how is that?
+tamami: SHOELACES!!!
+tamaki: SHOELACES!!!
+juniper: Shoe... laces?
+tamami: Let us see those loafers for a sec!
+*shoelace-attaching noises*
+tamaki: There! All finished! Try them on!
+juniper: Oh my! A contraption that keeps shoes bound to one's feet. How marvelous! Now I shall be able to resume my duties for all of eternity!
+juniper: Please, what are your names? I must know the beings which to thank for saving Flag Forest!
+tamami: I'm Tamami.
+tamaki: Tamaki's the name!
+juniper: Tamami and Tamaki! You shall go down in history as the Saviors of Flag Forest!
+tamaki: Saviors of Flag Forest! Not a bad title, ay Tama?
+tamami: I don't need any fancy title. I'm just glad to help any shoelaceless person in need.
+tamaki: Well then, let's head on to the village and do what we do best!
+tamami: Goodbye, Juniper!
+leave tamami
+tamaki: See ya, June!
+leave tamaki
+juniper: Farewell, Saviors! I wish you safe travels for the rest of your days!
+leave juniper
