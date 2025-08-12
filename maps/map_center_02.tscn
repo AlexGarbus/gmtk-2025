@@ -64,7 +64,7 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="CinematicTrigger" parent="." index="2" instance=ExtResource("4_r6uwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.5, 0)
 cinematics = Array[ExtResource("5_r6uwl")]([SubResource("Resource_6w74h")])
 
 [node name="CinematicTrigger2" parent="." index="3" instance=ExtResource("4_r6uwl")]
